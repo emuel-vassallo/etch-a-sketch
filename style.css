@@ -12,11 +12,13 @@ body {
 }
 
 #drawing-pad {
+  display: flex;
+  flex-direction: column;
   background-color: #bf2f19;
   border-radius: 54px;
-  width: 70%;
-  height: 70%;
-  padding: 21px 36px;
+  width: 730px;
+  height: 730px;
+  padding: 21px 36px 69px 36px;
 }
 
 #top-text {
@@ -26,18 +28,19 @@ body {
   font-style: italic;
   color: #ffac22;
   font-size: 38pt;
-  text-shadow: -1px 1px #282828;
-  padding-bottom: 21px;
+  text-shadow: -1px 1px 2px #282828;
   margin: 0;
+  padding-bottom: 21px;
 }
 
 .reg-trademark-symbol {
-  font-size: 16pt;
+  font-size: 14pt;
   padding-left: 8px;
   align-self: flex-start;
 }
 
 .side-name {
-  padding: 0 24px;
-  font-size: 16pt;
+  padding: 0 21px;
+  font-size: 17pt;
+  font-family: Helvetica, sans-serif;
 }
