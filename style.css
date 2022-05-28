@@ -11,22 +11,34 @@ body {
   margin: 0;
 }
 
-#name {
+#top-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-style: italic;
-  margin: 0;
+  margin: 21px 0;
   color: #ffac22;
   font-size: 38pt;
   text-align: center;
   text-shadow: -1px 1px #242424;
 }
 
-#name span {
-  padding: 0 21px;
+#top-text span {
+  font-size: 16pt;
+}
+
+.trademark-symbol {
+  padding-left: 8px;
+  align-self: flex-start;
+}
+
+.side-name {
+  padding: 0 24px;
   font-size: 16pt;
 }
 
 #drawing-pad {
-  background-color: #fc3b00;
+  background-color: #bf2f19;
   border-radius: 54px;
   width: 70%;
   height: 70%;
