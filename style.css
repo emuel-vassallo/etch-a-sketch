@@ -32,7 +32,8 @@ body {
   padding-bottom: 21px;
 }
 
-#main-name {
+#main-name,
+#name-symbol {
   font-family: 'Oleo Script';
 }
 
