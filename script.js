@@ -14,4 +14,20 @@ function createGrid(sideSquaresAmount) {
   }
 }
 
+function changeSquareColor(squareElement) {
+  squareElement.classList.add('changed-color');
+}
+
+function changeHoveredSquareColor() {
+  const squares = document.querySelectorAll('.grid-square');
+
+  squares.forEach((square) => {
+    square.addEventListener('mouseover', (e) => {
+      const squareHovered = e.target;
+      changeSquareColor(squareHovered);
+    });
+  });
+}
+
 createGrid(16);
+changeHoveredSquareColor();

@@ -65,6 +65,10 @@ footer {
   padding-top: 50%;
 }
 
+.changed-color {
+  background-color: #1d4d23;  
+}
+
 .grid-square:hover {
   background-color: #1d4d23;
   cursor: crosshair;
