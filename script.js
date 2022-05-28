@@ -1,8 +1,10 @@
-function createGrid(squaresAmount) {
-  const gridContainerTag = document.querySelector('#grid-container');
-  for (let i = 0; i < squaresAmount; i++) {
+function createGrid(sideSquaresAmount) {
+  const gridContainer = document.querySelector('#grid-container');
+  const totalSquaresAmount = Math.pow(sideSquaresAmount, 2);
+  for (let i = 0; i < totalSquaresAmount; i++) {
     const div = document.createElement('div');
-    gridContainerTag.appendChild(div);
+    div.classList.add('grid-square');
+    gridContainer.appendChild(div);
   }
 }
 
