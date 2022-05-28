@@ -3,7 +3,6 @@
 body {
   box-sizing: border-box;
   display: flex;
-  font-family: 'Oleo Script';
   background-color: #fddcbc;
   justify-content: center;
   align-items: center;
@@ -33,7 +32,11 @@ body {
   padding-bottom: 21px;
 }
 
-.reg-trademark-symbol {
+#main-name {
+  font-family: 'Oleo Script';
+}
+
+#name-symbol {
   font-size: 14pt;
   padding-left: 8px;
   align-self: flex-start;
