@@ -64,3 +64,19 @@ body {
   background-color: #1d4d23;
   cursor: crosshair;
 }
+
+#grid-container div:first-child {
+  border-top-left-radius: 12px;
+}
+
+#top-right-square {
+  border-top-right-radius: 12px;
+}
+
+#bottom-left-square {
+  border-bottom-left-radius: 12px;
+}
+
+#grid-container div:last-child {
+  border-bottom-right-radius: 12px;
+}
