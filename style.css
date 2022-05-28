@@ -16,9 +16,10 @@ body {
   flex-direction: column;
   background-color: #bf2f19;
   border-radius: 54px;
-  width: 730px;
-  height: 730px;
-  padding: 21px 36px 69px 36px;
+  width: 760px;
+  height: 760px;
+  padding: 21px 36px 21px 36px;
+  gap: 21px;
 }
 
 #top-text {
@@ -30,7 +31,6 @@ body {
   font-size: 38pt;
   text-shadow: -1px 1px 2px #282828;
   margin: 0;
-  padding-bottom: 21px;
 }
 
 #main-name,
@@ -50,27 +50,55 @@ footer {
 }
 
 .side-name {
-  padding: 0 21px;
+  padding: 0 16px;
   font-size: 17pt;
 }
 
 #grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  width: 100%;
   height: 100%;
 }
 
 .grid-square {
   background-color: #fde9d3;
-  padding-top: 50%;
 }
 
-.changed-color {
-  background-color: #1d4d23;  
+#bottom-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+#clear {
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: #bf2f19;
+  color: white;
+  scale: 1;
+  font-size: 11pt;
+  font-weight: 600;
+}
+
+#clear:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+#clear:active {
+  scale: 1;
+}
+
+.default-drawn-color {
+  background-color: #9a9a9a;
 }
 
 .grid-square:hover {
-  background-color: #1d4d23;
+  background-color: #9a9e9d;
   cursor: crosshair;
 }
 

@@ -14,8 +14,12 @@ function createGrid(sideSquaresAmount) {
   }
 }
 
-function changeSquareColor(squareElement) {
-  squareElement.classList.add('changed-color');
+function changeColorDefault(squareElement) {
+  squareElement.classList.add('default-drawn-color');
+}
+
+function removeColorDefault(squareElement) {
+  squareElement.classList.remove('default-drawn-color');
 }
 
 function changeHoveredSquareColor() {
@@ -24,10 +28,22 @@ function changeHoveredSquareColor() {
   squares.forEach((square) => {
     square.addEventListener('mouseover', (e) => {
       const squareHovered = e.target;
-      changeSquareColor(squareHovered);
+      changeColorDefault(squareHovered);
+    });
+  });
+}
+
+function clearGrid() {
+  const squares = document.querySelectorAll('.grid-square');
+  const clearButton = document.querySelector('#clear');
+
+  clearButton.addEventListener('click', () => {
+    squares.forEach((square) => {
+      removeColorDefault(square);
     });
   });
 }
 
 createGrid(16);
 changeHoveredSquareColor();
+clearGrid();
