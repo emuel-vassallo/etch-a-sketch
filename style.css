@@ -48,3 +48,14 @@ body {
   font-size: 17pt;
   font-family: Helvetica, sans-serif;
 }
+
+#grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  height: 100%;
+}
+
+.grid-square {
+  background-color: #fde9d3;
+  border: 0.2pt solid #1d4d23;
+}
