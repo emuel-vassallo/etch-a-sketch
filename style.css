@@ -16,9 +16,9 @@ body {
   flex-direction: column;
   background-color: #bf2f19;
   border-radius: 54px;
-  width: 760px;
+  width: 770px;
   height: 760px;
-  padding: 21px 36px 21px 36px;
+  padding: 21px 116px 21px 116px;
   gap: 21px;
 }
 
@@ -26,9 +26,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-style: italic;
   color: #ffac22;
-  font-size: 38pt;
+  font-size: 41pt;
   text-shadow: -1px 1px 2px #282828;
   margin: 0;
 }
@@ -39,8 +38,8 @@ body {
 }
 
 #name-symbol {
-  font-size: 14pt;
-  padding-left: 8px;
+  font-size: 15pt;
+  padding: 6px 0 0 8px;
   align-self: flex-start;
 }
 
@@ -51,13 +50,14 @@ footer,
 }
 
 .side-text {
-  padding: 0 16px;
+  font-style: italic;
+  padding: 0 25px;
   font-size: 17pt;
 }
 
 #grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
   width: 100%;
   height: 100%;
 }
@@ -73,11 +73,12 @@ footer,
   height: 75px;
   gap: 21px;
   color: white;
+  margin: 16px 0;
 }
 
 .regular-button {
-  height: 40px;
-  padding: 0 16px;
+  height: 46px;
+  padding: 0 18px;
   border-radius: 5px;
   border: 1px solid white;
   background-color: #bf2f19;
@@ -85,7 +86,7 @@ footer,
   transform: scale(1);
   font-size: 11pt;
   font-weight: 600;
-  box-shadow: 0 3px 0.3rem #8a2f19;
+  box-shadow: 0 2px 0.2rem #8a2f19;
 }
 
 .regular-button:hover {
@@ -98,11 +99,11 @@ footer,
 }
 
 .default-drawn-color {
-  background-color: #9a9a9a;
+  background-color: #9a9a90;
 }
 
 .grid-square:hover {
-  background-color: #9a9e9d;
+  background-color: #9a9e90;
   cursor: crosshair;
 }
 
@@ -127,7 +128,7 @@ footer,
 }
 
 footer {
-  margin-top: 16px;
+  margin-top: 21px;
 }
 
 footer a {
