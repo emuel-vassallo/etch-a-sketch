@@ -16,36 +16,9 @@ body {
   flex-direction: column;
   background-color: #bf2f19;
   border-radius: 54px;
-  width: 820px;
-  height: 800px;
+  width: 860px;
+  height: 840px;
   justify-content: space-evenly;
-}
-
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-.apply-shake {
-  animation: shake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 #top-board {
@@ -89,13 +62,14 @@ footer,
 #grid-container {
   display: grid;
   align-self: center;
-  width: 560px;
-  height: 560px;
+  width: 600px;
+  height: 600px;
   cursor: crosshair;
 }
 
 .grid-square {
-  background-color: #fde9d3;
+  /* background-color: #fde9d3; */
+  background-color: #fbe8d5;
 }
 
 #bottom-board {
@@ -109,30 +83,42 @@ footer,
 }
 
 .regular-button {
-  height: 46px;
-  padding: 0 11px;
+  height: 83%;
+  padding: 0 22px;
   border-radius: 8px;
-  border: 1px solid white;
-  background-color: #c02b19;
-  color: white;
+  background-color: #dadada;
+  border: none;
   transform: scale(1);
   font-size: 11pt;
   font-weight: 600;
   box-shadow: -1px 2px 0.3rem #8a2f19;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .regular-button:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.06);
+  transition: all 0.1s ease-in-out;
 }
 
 .regular-button:active {
-  transform: scale(1);
+  transform: scale(1.04);
+}
+
+#change-grid-size {
+  height: 37px;
+}
+
+#grid-size-container p {
+  text-align: center;
+  margin: 0 0 5px 0;
 }
 
 .selected-mode {
-  background-color: #e03815;
-  transform: scale(1.05);
+  margin-bottom: 4px;
+  box-shadow: -1px 5px 0.3rem #8a2f19;
+  background-color: #eaeaea;
 }
 
 #grid-container div:first-child {
@@ -151,14 +137,43 @@ footer,
   border-bottom-right-radius: 12px;
 }
 
-.fa-github {
-  color: black;
+.fa-github,
+footer {
+  color: #242424;
 }
 
 footer {
   margin-top: 21px;
+  font-weight: 600;
 }
 
 footer a {
   font-size: 22px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.apply-shake {
+  animation: shake 0.75s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
