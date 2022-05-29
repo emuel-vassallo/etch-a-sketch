@@ -23,12 +23,38 @@ function removAllGridSquares() {
   });
 }
 
-function removeColorDefault(squareElement) {
+function removeSquareColor(squareElement) {
   squareElement.classList.remove('grid-square-drawn');
 }
 
-function changeColorDefault(squareElement) {
+function changeSquareColorDefault(squareElement) {
   squareElement.classList.add('grid-square-drawn');
+}
+
+function getRandomNumber(maxNum) {
+  let randomNumber = Math.random();
+  randomNumber = randomNumber * maxNum;
+  const roundedRandomNumber = Math.floor(randomNumber);
+  return roundedRandomNumber;
+}
+
+function getRandomNumbers(numbersAmount) {
+  let randomNumbers = [];
+  for (let i = 0; i < numbersAmount; i++) {
+    const randomNumber = getRandomNumber(255);
+    randomNumbers.push(randomNumber);
+  }
+  return randomNumbers;
+}
+
+function getRandomColor() {
+  const randomNumbers = getRandomNumbers(3);
+  return `rgb(${randomNumbers[0]}, ${randomNumbers[1]}, ${randomNumbers[2]})`;
+}
+
+function changeSquareColorRandom(squareElement) {
+  const randomColor = getRandomColor();
+  squareElement.style.backgroundColor = randomColor;
 }
 
 function updateShownGridSize(squaresPerSide) {
@@ -38,11 +64,10 @@ function updateShownGridSize(squaresPerSide) {
 
 function changeHoveredSquaresColor() {
   const squares = document.querySelectorAll('.grid-square');
-
   squares.forEach((square) => {
     square.addEventListener('mouseover', (e) => {
       const squareHovered = e.target;
-      changeColorDefault(squareHovered);
+      changeSquareColorDefault(squareHovered);
     });
   });
 }
@@ -53,7 +78,7 @@ function clearGridOnClick() {
 
   clearButton.addEventListener('click', () => {
     squares.forEach((square) => {
-      removeColorDefault(square);
+      removeSquareColor(square);
     });
   });
 }
