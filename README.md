@@ -1,10 +1,10 @@
-# Etch A Sketch Toy
+# Etch A Sketch
 
-A website version of the Etch A Sketch drawing toy. Created for The Odin Project's [curriculum ](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors).
+A website version of the [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) drawing toy. This was created for The Odin Project's [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
 
 ## Live Demo
 
-**Preview**: [here](https://emuel-vassallo.github.io/etch-a-sketch/)
+**Preview**: https://emuel-vassallo.github.io/etch-a-sketch/
 
 ## Technologies
 
@@ -16,8 +16,12 @@ A website version of the Etch A Sketch drawing toy. Created for The Odin Project
 
 ### What I learned
 
--
+- Using a custom imported font
+- Making an element shake using an animation
+- Using event listeners with buttons
+- Getting a random color
+- Working with CSS grids
 
-### Future Improvements
+## Credits
 
--
+- [Etch-A-Sketch Design](https://dribbble.com/shots/5718696-The-Creative-Pain-Basics) by Tyler Pate
