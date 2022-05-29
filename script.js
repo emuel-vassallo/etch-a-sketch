@@ -24,11 +24,11 @@ function removAllGridSquares() {
 }
 
 function removeColorDefault(squareElement) {
-  squareElement.classList.remove('default-drawn-color');
+  squareElement.classList.remove('grid-square-drawn');
 }
 
 function changeColorDefault(squareElement) {
-  squareElement.classList.add('default-drawn-color');
+  squareElement.classList.add('grid-square-drawn');
 }
 
 function updateShownGridSize(squaresPerSide) {

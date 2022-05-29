@@ -18,7 +18,7 @@ body {
   border-radius: 54px;
   width: 770px;
   height: 760px;
-  padding: 21px 116px 21px 116px;
+  padding: 21px;
   gap: 21px;
 }
 
@@ -33,23 +33,23 @@ body {
 }
 
 #main-name,
-#name-symbol {
+#registered-trademark {
   font-family: 'Oleo Script';
 }
 
-#name-symbol {
+#registered-trademark {
   font-size: 15pt;
   padding: 6px 0 0 8px;
   align-self: flex-start;
 }
 
-.side-text,
+.top-side-text,
 footer,
 #bottom-board {
   font-family: Helvetica, sans-serif;
 }
 
-.side-text {
+.top-side-text {
   font-style: italic;
   padding: 0 25px;
   font-size: 17pt;
@@ -57,13 +57,21 @@ footer,
 
 #grid-container {
   display: grid;
-  grid-template-columns: repeat(16, minmax(0, 1fr));
-  width: 100%;
-  height: 100%;
+  align-self: center;
+  width: 560px;
+  height: 560px;
 }
 
 .grid-square {
   background-color: #fde9d3;
+}
+
+.grid-square:hover {
+  cursor: crosshair;
+}
+
+.grid-square-drawn {
+  background-color: #9a9a90;
 }
 
 #bottom-board {
@@ -73,7 +81,6 @@ footer,
   height: 75px;
   gap: 21px;
   color: white;
-  margin: 16px 0;
 }
 
 .regular-button {
@@ -84,7 +91,7 @@ footer,
   background-color: #bf2f19;
   color: white;
   transform: scale(1);
-  font-size: 11pt;
+  font-size: 12pt;
   font-weight: 600;
   box-shadow: 0 2px 0.2rem #8a2f19;
 }
@@ -96,15 +103,6 @@ footer,
 
 .regular-button:active {
   transform: scale(1);
-}
-
-.default-drawn-color {
-  background-color: #9a9a90;
-}
-
-.grid-square:hover {
-  background-color: #9a9e90;
-  cursor: crosshair;
 }
 
 #grid-container div:first-child {
