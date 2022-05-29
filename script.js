@@ -51,6 +51,12 @@ function clearGridOnClick() {
   });
 }
 
+function showGridSize(squaresPerSide) {
+  const gridSizeTag = document.querySelector('#grid-size');
+  gridSizeTag.textContent = `${squaresPerSide} x ${squaresPerSide}`;
+}
+
 createGrid(16);
 changeHoveredSquareColor();
 clearGridOnClick();
+showGridSize(16);
