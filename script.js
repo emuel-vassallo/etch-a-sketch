@@ -93,12 +93,17 @@ function changeColorMode() {
 }
 
 function clearGridOnClick() {
+  const sketchBoard = document.querySelector('#sketch-board');
   const squares = document.querySelectorAll('.grid-square');
   const clearButton = document.querySelector('#clear');
 
   clearButton.addEventListener('click', () => {
-    squares.forEach((square) => {
-      eraseSquareColor(square);
+    sketchBoard.classList.add('apply-shake');
+    sketchBoard.addEventListener('animationend', () => {
+      sketchBoard.classList.remove('apply-shake');
+      squares.forEach((square) => {
+        eraseSquareColor(square);
+      });
     });
   });
 }
