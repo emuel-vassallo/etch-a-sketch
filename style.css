@@ -22,7 +22,7 @@ body {
   gap: 21px;
 }
 
-#top-text {
+#top-bar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,12 +44,13 @@ body {
   align-self: flex-start;
 }
 
-.side-name,
-footer {
+.side-text,
+footer,
+#bottom-bar {
   font-family: Helvetica, sans-serif;
 }
 
-.side-name {
+.side-text {
   padding: 0 16px;
   font-size: 17pt;
 }
@@ -65,32 +66,35 @@ footer {
   background-color: #fde9d3;
 }
 
-#bottom-buttons {
+#bottom-bar {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 75px;
+  gap: 21px;
+  color: white;
 }
 
-#clear {
-  width: 100px;
-  height: 32px;
+.regular-button {
+  height: 40px;
+  padding: 0 16px;
   border-radius: 5px;
   border: 1px solid white;
   background-color: #bf2f19;
   color: white;
-  scale: 1;
+  transform: scale(1);
   font-size: 11pt;
   font-weight: 600;
+  box-shadow: 0 3px 0.3rem #8a2f19;
 }
 
-#clear:hover {
+.regular-button:hover {
   cursor: pointer;
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
-#clear:active {
-  scale: 1;
+.regular-button:active {
+  transform: scale(1);
 }
 
 .default-drawn-color {

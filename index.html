@@ -14,14 +14,18 @@
 
   <body>
     <div id="drawing-pad">
-      <p id="top-text">
-        <span class="side-name">MAGIC</span>
+      <p id="top-bar">
+        <span class="side-text">MAGIC</span>
         <span id="main-name">Etch A Sketch</span>
-        <span id="name-symbol">®</span><span class="side-name">SCREEN</span>
+        <span id="name-symbol">®</span><span class="side-text">SCREEN</span>
       </p>
       <div id="grid-container"></div>
-      <div id="bottom-buttons">
-        <button id="clear">Clear</button>
+      <div id="bottom-bar">
+        <button id="clear" class="regular-button">Clear</button>
+        <button id="change-grid-size" class="regular-button">
+          Change Grid Size
+        </button>
+        <p>Grid Size: <span id="grid-size"></span></p>
       </div>
     </div>
     <footer>
