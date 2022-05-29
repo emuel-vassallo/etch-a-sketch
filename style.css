@@ -16,19 +16,18 @@ body {
   flex-direction: column;
   background-color: #bf2f19;
   border-radius: 54px;
-  width: 770px;
-  height: 760px;
-  padding: 21px;
-  gap: 21px;
+  width: 820px;
+  height: 800px;
+  justify-content: space-evenly;
 }
 
 #top-board {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffac22;
+  color: #ffac2f;
   font-size: 41pt;
-  text-shadow: -1px 1px 2px #282828;
+  text-shadow: -1px 1px 2px #323232;
   margin: 0;
 }
 
@@ -60,14 +59,11 @@ footer,
   align-self: center;
   width: 560px;
   height: 560px;
+  cursor: crosshair;
 }
 
 .grid-square {
   background-color: #fde9d3;
-}
-
-#grid-container:hover {
-  cursor: crosshair;
 }
 
 .grid-square-drawn {
@@ -93,7 +89,7 @@ footer,
   transform: scale(1);
   font-size: 12pt;
   font-weight: 600;
-  box-shadow: 0 2px 0.2rem #8a2f19;
+  box-shadow: -1px 2px 0.3rem #8a2f19;
 }
 
 .regular-button:hover {
