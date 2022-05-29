@@ -14,6 +14,13 @@ function createGrid(sideSquaresAmount) {
   }
 }
 
+function clearGrid() {
+  const squares = document.querySelectorAll('.grid-square');
+  squares.forEach((square) => {
+    square.remove();
+  });
+}
+
 function changeColorDefault(squareElement) {
   squareElement.classList.add('default-drawn-color');
 }
@@ -33,7 +40,7 @@ function changeHoveredSquareColor() {
   });
 }
 
-function clearGrid() {
+function clearGridOnClick() {
   const squares = document.querySelectorAll('.grid-square');
   const clearButton = document.querySelector('#clear');
 
@@ -46,4 +53,4 @@ function clearGrid() {
 
 createGrid(16);
 changeHoveredSquareColor();
-clearGrid();
+clearGridOnClick();
