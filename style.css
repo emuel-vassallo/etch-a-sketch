@@ -66,28 +66,25 @@ footer,
   background-color: #fde9d3;
 }
 
-.grid-square-drawn {
-  background-color: #9a9a90;
-}
-
 #bottom-board {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 75px;
-  gap: 21px;
+  font-size: 11pt;
+  gap: 18px;
   color: white;
 }
 
 .regular-button {
   height: 46px;
-  padding: 0 18px;
-  border-radius: 5px;
+  padding: 0 11px;
+  border-radius: 8px;
   border: 1px solid white;
-  background-color: #bf2f19;
+  background-color: #c02b19;
   color: white;
   transform: scale(1);
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: 600;
   box-shadow: -1px 2px 0.3rem #8a2f19;
 }
@@ -99,6 +96,11 @@ footer,
 
 .regular-button:active {
   transform: scale(1);
+}
+
+.selected-mode {
+  background-color: #e03815;
+  transform: scale(1.05);
 }
 
 #grid-container div:first-child {

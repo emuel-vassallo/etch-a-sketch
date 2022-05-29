@@ -23,14 +23,6 @@ function removAllGridSquares() {
   });
 }
 
-function removeSquareColor(squareElement) {
-  squareElement.classList.remove('grid-square-drawn');
-}
-
-function changeSquareColorDefault(squareElement) {
-  squareElement.classList.add('grid-square-drawn');
-}
-
 function getRandomNumber(maxNum) {
   let randomNumber = Math.random();
   randomNumber = randomNumber * maxNum;
@@ -38,17 +30,17 @@ function getRandomNumber(maxNum) {
   return roundedRandomNumber;
 }
 
-function getRandomNumbers(numbersAmount) {
+function getRandomNumbers(numbersAmount, maxNum) {
   let randomNumbers = [];
   for (let i = 0; i < numbersAmount; i++) {
-    const randomNumber = getRandomNumber(255);
+    const randomNumber = getRandomNumber(maxNum);
     randomNumbers.push(randomNumber);
   }
   return randomNumbers;
 }
 
 function getRandomColor() {
-  const randomNumbers = getRandomNumbers(3);
+  const randomNumbers = getRandomNumbers(3, 255);
   return `rgb(${randomNumbers[0]}, ${randomNumbers[1]}, ${randomNumbers[2]})`;
 }
 
@@ -57,18 +49,46 @@ function changeSquareColorRandom(squareElement) {
   squareElement.style.backgroundColor = randomColor;
 }
 
+function changeSquareColorNormal(squareElement) {
+  squareElement.style.backgroundColor = '#767676';
+}
+
+function eraseSquareColor(squareElement) {
+  squareElement.style.backgroundColor = '#fde9d3';
+}
+
 function updateShownGridSize(squaresPerSide) {
   const gridSizeTag = document.querySelector('#grid-size');
-  gridSizeTag.textContent = `${squaresPerSide} x ${squaresPerSide}`;
+  gridSizeTag.textContent = `${squaresPerSide}x${squaresPerSide}`;
 }
 
 function changeHoveredSquaresColor() {
+  const normalModeButton = document.querySelector('#normal-mode');
   const squares = document.querySelectorAll('.grid-square');
+
   squares.forEach((square) => {
     square.addEventListener('mouseover', (e) => {
       const squareHovered = e.target;
-      changeSquareColorDefault(squareHovered);
+      const isRainbowModeSelected =
+        normalModeButton.classList.contains('selected-mode');
+      if (isRainbowModeSelected) changeSquareColorNormal(squareHovered);
+      else changeSquareColorRandom(squareHovered);
     });
+  });
+}
+
+function changeColorMode() {
+  const normalModeButton = document.querySelector('#normal-mode');
+  const rainbowModeButton = document.querySelector('#rainbow-mode');
+
+  rainbowModeButton.addEventListener('click', () => {
+    normalModeButton.classList.remove('selected-mode');
+    rainbowModeButton.classList.add('selected-mode');
+  });
+
+  normalModeButton.addEventListener('click', () => {
+    normalModeButton.classList.add('selected-mode');
+    rainbowModeButton.classList.remove('selected-mode');
   });
 }
 
@@ -78,17 +98,9 @@ function clearGridOnClick() {
 
   clearButton.addEventListener('click', () => {
     squares.forEach((square) => {
-      removeSquareColor(square);
+      eraseSquareColor(square);
     });
   });
-}
-
-function updateGrid(newSquaresPerSide) {
-  removAllGridSquares();
-  createGrid(newSquaresPerSide);
-  updateShownGridSize(newSquaresPerSide);
-  changeHoveredSquaresColor();
-  clearGridOnClick();
 }
 
 function getNewSquaresPerSide() {
@@ -112,16 +124,20 @@ function changeGridSizeOnRequest() {
 
   changeGridSizeButton.addEventListener('click', () => {
     const newSquaresPerSide = getNewSquaresPerSide();
-    const isNewSquaresPerSideValid = newSquaresPerSide !== undefined;
-
-    if (isNewSquaresPerSideValid) {
-      updateGrid(newSquaresPerSide);
-    }
+    const isNewSquaresPerSideInvalid = newSquaresPerSide === undefined;
+    if (isNewSquaresPerSideInvalid) return;
+    updateGrid(newSquaresPerSide);
   });
 }
 
-createGrid(16);
-updateShownGridSize(16);
-changeHoveredSquaresColor();
-clearGridOnClick();
+function updateGrid(newSquaresPerSide) {
+  removAllGridSquares();
+  createGrid(newSquaresPerSide);
+  updateShownGridSize(newSquaresPerSide);
+  changeHoveredSquaresColor();
+  changeColorMode();
+  clearGridOnClick();
+}
+
+updateGrid(16);
 changeGridSizeOnRequest();
