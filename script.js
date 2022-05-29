@@ -50,11 +50,11 @@ function changeSquareColorRandom(squareElement) {
 }
 
 function changeSquareColorNormal(squareElement) {
-  squareElement.style.backgroundColor = '#767676';
+  squareElement.style.backgroundColor = '#656565';
 }
 
 function eraseSquareColor(squareElement) {
-  squareElement.style.backgroundColor = '#fde9d3';
+  squareElement.style.backgroundColor = '#F6E2CB';
 }
 
 function updateShownGridSize(squaresPerSide) {
@@ -99,8 +99,10 @@ function clearGridOnClick() {
 
   clearButton.addEventListener('click', () => {
     sketchBoard.classList.add('apply-shake');
+
     sketchBoard.addEventListener('animationend', () => {
       sketchBoard.classList.remove('apply-shake');
+
       squares.forEach((square) => {
         eraseSquareColor(square);
       });
