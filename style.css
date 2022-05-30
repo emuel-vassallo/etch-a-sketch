@@ -106,18 +106,22 @@ footer,
   transform: scale(1);
 }
 
+#change-grid-size-container {
+  height: 82%;
+}
+
 #change-grid-size {
-  height: 36px;
+  height: 32px;
 }
 
 #grid-size-container p {
   text-align: center;
   margin: 0;
-  padding: 0 0 2px 0;
+  padding: 0 0 8px 0;
 }
 
 .selected-mode {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   box-shadow: -1px 4px 0.3rem #8a2f19;
   background-color: #cfcfcf;
 }

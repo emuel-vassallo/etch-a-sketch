@@ -90,7 +90,6 @@ function getDarkenedColor(darkenedRgbValues) {
 }
 
 function changeSquareColorDarken(squareElement) {
-  console.log(squareElement);
   const rgbValues = getRgbValues(squareElement);
   const darkenedRgbValues = getDarkenedRgbValues(rgbValues);
   const darkenedColor = getDarkenedColor(darkenedRgbValues);
