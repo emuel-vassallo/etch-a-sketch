@@ -68,8 +68,7 @@ footer,
 }
 
 .grid-square {
-  /* background-color: #fde9d3; */
-  background-color: #fbe8d5;
+  background-color: #ececec;
 }
 
 #bottom-board {
@@ -78,15 +77,15 @@ footer,
   align-items: center;
   height: 75px;
   font-size: 11pt;
-  gap: 18px;
+  gap: 13px;
   color: white;
 }
 
 .regular-button {
-  height: 83%;
-  padding: 0 22px;
+  height: 82%;
+  padding: 0 16px;
   border-radius: 8px;
-  background-color: #dadada;
+  background-color: #eaeaea;
   border: none;
   transform: scale(1);
   font-size: 11pt;
@@ -98,27 +97,33 @@ footer,
 
 .regular-button:hover {
   cursor: pointer;
-  transform: scale(1.06);
+  margin-bottom: 4px;
+  transform: scale(1.05);
   transition: all 0.1s ease-in-out;
 }
 
 .regular-button:active {
-  transform: scale(1.04);
+  transform: scale(1);
 }
 
 #change-grid-size {
-  height: 37px;
+  height: 36px;
 }
 
 #grid-size-container p {
   text-align: center;
-  margin: 0 0 5px 0;
+  margin: 0;
+  padding: 0 0 2px 0;
 }
 
 .selected-mode {
   margin-bottom: 4px;
-  box-shadow: -1px 5px 0.3rem #8a2f19;
-  background-color: #eaeaea;
+  box-shadow: -1px 4px 0.3rem #8a2f19;
+  background-color: #cfcfcf;
+}
+
+.selected-mode:active {
+  transform: scale(1.1);
 }
 
 #grid-container div:first-child {
@@ -139,7 +144,7 @@ footer,
 
 .fa-github,
 footer {
-  color: #242424;
+  color: black;
 }
 
 footer {
