@@ -56,7 +56,7 @@ function changeSquareColorRandom(squareElement) {
 }
 
 function changeSquareColorNormal(squareElement) {
-  squareElement.style.backgroundColor = '#424242';
+  squareElement.style.backgroundColor = '#202020';
 }
 
 function getRgbValues(squareElement) {
@@ -97,7 +97,7 @@ function changeSquareColorDarken(squareElement) {
 }
 
 function eraseSquareColor(squareElement) {
-  squareElement.style.backgroundColor = '#ececec';
+  squareElement.style.backgroundColor = '#d8d8d8';
 }
 
 function updateShownGridSize(squaresPerSide) {
