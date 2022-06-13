@@ -1,8 +1,8 @@
 # Etch A Sketch
 
-## Showcase
+A website version of the [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) drawing toy, created as part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
 
-A website version of the [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) drawing toy, developed as per The Odin Project's [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
+## Showcase
 
 ![screenshot 1](images/screenshot1.png)
 
