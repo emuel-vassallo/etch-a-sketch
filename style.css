@@ -10,7 +10,8 @@ body {
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  margin: 21px 0 0 0;
+  width: 100vw;
+  margin: 0;
 }
 
 #sketch-board {
@@ -143,20 +144,26 @@ body {
   border-bottom-right-radius: 12px;
 }
 
-.fa-github,
-footer {
-  color: black;
-}
-
 footer {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  border-top: var(--border-divider);
+  position: fixed;
+  bottom: 0;
+  font-size: 0.9rem;
 }
 
 footer a {
-  font-size: 22px;
-  padding-left: 8px;
+  color: #424242;
+  text-decoration: none;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 @keyframes shake {

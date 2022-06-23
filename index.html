@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Etch A Sketch</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-  <title>Etch A Sketch</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-  <div id="sketch-board" ondragstart="return false;" ondrop="return false;">
-    <p id="top-board">
-      <span class="top-side-text">MAGIC</span>
-      <span id="main-name"><a href="https://en.wikipedia.org/wiki/Etch_A_Sketch" title="Learn more on Wikipedia"
-          target="_blank">Etch A Sketch</a></span>
-      <span id="registered-trademark">®</span><span class="top-side-text">SCREEN</span>
-    </p>
-    <div id="grid-container"></div>
-    <div id="bottom-board">
-      <button id="clear" class="regular-button">Shake</button>
-      <button id="normal-mode" class="regular-button selected-mode">
-        Normal
-      </button>
-      <button id="rainbow-mode" class="regular-button">Rainbow</button>
-      <button id="darken-mode" class="regular-button">Darken</button>
-      <div id="grid-size-container">
-        <p><strong>Grid Size:</strong> <span id="grid-size"></span></p>
-        <button id="change-grid-size" class="regular-button">
-          Change Grid Size
+  <body>
+    <div id="sketch-board" ondragstart="return false;" ondrop="return false;">
+      <p id="top-board">
+        <span class="top-side-text">MAGIC</span>
+        <span id="main-name"
+          ><a
+            href="https://en.wikipedia.org/wiki/Etch_A_Sketch"
+            title="Learn more on Wikipedia"
+            target="_blank"
+            >Etch A Sketch</a
+          ></span
+        >
+        <span id="registered-trademark">®</span
+        ><span class="top-side-text">SCREEN</span>
+      </p>
+      <div id="grid-container"></div>
+      <div id="bottom-board">
+        <button id="clear" class="regular-button">Shake</button>
+        <button id="normal-mode" class="regular-button selected-mode">
+          Normal
         </button>
+        <button id="rainbow-mode" class="regular-button">Rainbow</button>
+        <button id="darken-mode" class="regular-button">Darken</button>
+        <div id="grid-size-container">
+          <p><strong>Grid Size:</strong> <span id="grid-size"></span></p>
+          <button id="change-grid-size" class="regular-button">
+            Change Grid Size
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <footer>
-    <p>Designed and developed by <strong>Emuel Vassallo</strong></p>
-    <a href="https://github.com/emuel-vassallo/" target="_blank">
-      <i class="fa fa-github"></i>
-    </a>
-  </footer>
-</body>
-
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a href="https://github.com/emuel-vassallo/" target="_blank">
+          Emuel Vassallo
+        </a>
+        |
+        <span id="year">&copy; </span>
+        |
+        <a
+          href="https://github.com/emuel-vassallo/etch-a-sketch/"
+          target="_blank"
+        >
+          Source
+        </a>
+      </p>
+    </footer>
+  </body>
 </html>

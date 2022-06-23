@@ -203,3 +203,7 @@ function updateGrid(newSquaresPerSide) {
 
 updateGrid(16);
 changeGridSizeOnRequest();
+
+document
+  .getElementById('year')
+  .appendChild(document.createTextNode(new Date().getFullYear()));
