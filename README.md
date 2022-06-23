@@ -1,20 +1,27 @@
 # Etch A Sketch
 
-A website version of the [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) drawing toy, created as part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
+A simple sketching app similar to the [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) drawing toy. Created as part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
+
+### [Live Demo](https://emuel-vassallo.github.io/etch-a-sketch/)
 
 ## Showcase
 
 ![screenshot 1](images/screenshot1.png)
-
-## Live Demo
-
-👉 **Preview**: https://emuel-vassallo.github.io/etch-a-sketch/
 
 ## Technologies
 
 - HTML
 - CSS
 - JavaScript
+
+## Features
+
+- Minimal UI
+- Shake animation when clearing the screen
+- Three different color modes
+  - Normal
+  - Rainbow
+  - Darken
 
 ## What I Learned
 
